@@ -1,4 +1,4 @@
-#fhwien-python-final
+# fhwien-python-final
 
 ## Password Generator
 Our passwordgenerator gives the user a secure password with defined criteria.
