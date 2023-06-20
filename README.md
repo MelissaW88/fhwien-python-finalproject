@@ -7,5 +7,5 @@ The criterias the user can choose from are
 - numbers and 
 - special characters.
 
-The user can put the minimum length in numbers and can say yes or no if they want numbers or special characters.
+The user can write the minimum length in digits e.g. the user wants a password with at least 5 digits and can say yes or no if they want numbers or special characters in the password.
 At the end the user can save the password in a specified file. We also added try-except when any errors occured while saving.
