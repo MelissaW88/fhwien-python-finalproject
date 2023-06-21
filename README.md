@@ -10,5 +10,16 @@ We decided to split our implementation into several working packages:
  - Package 5: Guessing game with loosing lives. No life is lost when the same letter is entered again
  - Package 6: Integration and testing
 
+To start the game, first retrieve the 4 Python files with git (in Git Bash or another UNIX shell):
+```
+git clone git@github.com:MelissaW88/fhwien-python-finalproject.git
+```
+If python is installed in your shell:
+```
+cd fhwien-python-finalproject/hangman
+python3 hangman.py
+```
+Or you can open this file `hangman.py` in Thonny and execute it from there.
+
 ## Password Generator
 Describe your project here
