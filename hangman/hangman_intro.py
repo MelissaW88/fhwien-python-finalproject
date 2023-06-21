@@ -22,16 +22,11 @@ def print_intro():
 
     time.sleep(1)
 
-    print("Hello " + name + ". Do you know the rules of the game?")
+    print("Hello " + name + ". Do you know the rules of the game? [y/N]")
 
     knowsrules = input()
 
-    if (
-        knowsrules == "no"
-        or knowsrules == "No"
-        or knowsrules == "n"
-        or knowsrules == "N"
-    ):
+    if not knowsrules.lower() in ("y", "j", "yes", "ja"):
         print(rules + "\n")
         time.sleep(2)
 

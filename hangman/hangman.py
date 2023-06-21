@@ -25,6 +25,17 @@ def print_word(word, guessed_letters):
     )
 
 
+# Call the same function recursively, until we get a single letter
+def ask_for_single_letter():
+    guess = input("Enter a letter: ").lower()
+
+    if len(guess) != 1 or not guess.isalpha():
+        print("Please enter a single letter.")
+        return ask_for_single_letter()
+
+    return guess
+
+
 # Developping hangman guessing game with loosing lives. The player has 6 lives in total.
 def play_hangman():
     word, translation = get_random_word()
@@ -49,7 +60,7 @@ def play_hangman():
         print()
 
         # Letters can be entered in lower or upper cases.
-        guess = input("Enter a letter: ").lower()
+        guess = ask_for_single_letter()
 
         # No life is lost when the same letter is entered again.
         if guess in guessed_letters:
@@ -80,4 +91,12 @@ def play_hangman():
     )
 
 
-play_hangman()
+def play_in_loop():
+    play_hangman()
+    answer = input("Do you want to play again? [y/N]").lower()
+    if answer in ("y", "j", "yes", "ja"):
+        play_in_loop()
+
+
+if __name__ == "__main__":
+    play_in_loop()
